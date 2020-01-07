@@ -14,7 +14,8 @@ class EmailAddressParser
   # if not, add a space after every .com then parse
 
   def parse
-    # removes spaces from string, then splits string at commas
+    # removes spaces from string, then splits string at commas,
+    # then removes any dupicate emails
     @string_of_emails.gsub(",", "").split(" ").uniq
 
   end
