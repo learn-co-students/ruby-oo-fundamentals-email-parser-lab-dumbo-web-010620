@@ -10,7 +10,7 @@ class EmailAddressParser
 
     attr_accessor :email
 
-    def parse # .split - breaks 1 string into array list,  .uniq - removes dupes.
+    def parse # .delete(",") - will remove comma's from string, .split - breaks 1 string into array list,  .uniq - removes dupes.
         @email.delete(",").split.uniq
     end
 end
